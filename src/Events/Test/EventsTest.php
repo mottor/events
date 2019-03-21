@@ -2,16 +2,18 @@
 
 namespace Mottor\Events\Test;
 
-use Mottor\Events\Events;
+use Mottor\Events\EventBus;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class EventsTest
- * @package engine\tests
+ * @package Mottor\Events\Test
  */
 class EventsTest extends TestCase
 {
-    /** @var Events */
+    /**
+     * @var EventBus
+     */
     protected $events;
 
     /** @var array */
@@ -19,7 +21,7 @@ class EventsTest extends TestCase
 
     public function __construct($name = null, array $data = [], $dataName = '') {
         parent::__construct($name, $data, $dataName);
-        $this->events = new Events();
+        $this->events = new EventBus();
         $this->testListeners = [
             'class' => TestEventListener::class,
             'classHandlerAsyncInArray' => [
@@ -56,7 +58,7 @@ class EventsTest extends TestCase
         $this->events->setLogFileName($logFileName);
         $this->assertEquals($logFileName, $this->events->getLogFileName());
 
-        $logFileName = "folder" . DS . "tmp" . DS . "test.log";
+        $logFileName = "folder" . DIRECTORY_SEPARATOR . "tmp" . DIRECTORY_SEPARATOR . "test.log";
         $this->events->setLogFileName($logFileName);
         $this->assertEquals($logFileName, $this->events->getLogFileName());
     }
@@ -66,7 +68,7 @@ class EventsTest extends TestCase
         $this->events->setLogFileName($logFileName);
         $this->assertEquals($logFileName, $this->events->getLogFileName());
 
-        $logFileName = "folder" . DS . "tmp" . DS . "test.log";
+        $logFileName = "folder" . DIRECTORY_SEPARATOR . "tmp" . DIRECTORY_SEPARATOR . "test.log";
         $this->events->setLogFileName($logFileName);
         $this->assertEquals($logFileName, $this->events->getLogFileName());
     }
@@ -321,7 +323,6 @@ class EventsTest extends TestCase
         }
 
         $this->events->trigger($testEventName);
-        var_dump(json_decode($this->events->getLogContents()));
     }
 
     public function tearDown() {

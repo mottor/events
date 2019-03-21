@@ -3,10 +3,10 @@
 namespace Mottor\Events;
 
 /**
- * Class Events
- * @package engine
+ * Class EventBus
+ * @package Mottor\Events
  */
-class Events
+class EventBus
 {
     /**
      * @var string путь к файл с указанием самого файла

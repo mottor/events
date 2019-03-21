@@ -4,7 +4,7 @@ namespace Mottor\Events\Test;
 
 /**
  * Class TestObject
- * @package engine\tests
+ * @package Mottor\Events\Test
  */
 class TestObject
 {

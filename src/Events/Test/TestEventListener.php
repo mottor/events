@@ -5,7 +5,7 @@ use Mottor\Events\EventListenerInterface;
 
 /**
  * Class TestEventListener
- * @package engine\tests
+ * @package Mottor\Events\Test
  */
 class TestEventListener implements EventListenerInterface
 {

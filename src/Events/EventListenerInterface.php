@@ -3,8 +3,8 @@
 namespace Mottor\Events;
 
 /**
- * Class EventListenerInterface
- * @package engine
+ * Interface EventListenerInterface
+ * @package Mottor\Events
  */
 interface EventListenerInterface
 {
