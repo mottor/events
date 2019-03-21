@@ -17,11 +17,6 @@
       "Mottor\\Events\\": "src/Events"
     }
   },
-  "autoload-dev": {
-    "psr-4": {
-      "Mottor\\Events\\Test\\": "src/Events/Test"
-    }
-  },
   "require-dev": {
     "phpunit/phpunit": "^5.7"
   }
